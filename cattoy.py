@@ -46,7 +46,7 @@ speed = 50
 
 f = open('/run/cattoylog.txt', 'w')
 while True:
-    if not (datetime.datetime.now().hour  > 22 or datetime.datetime.now().hour < 6):
+    if not (datetime.datetime.now().hour  > 21 or datetime.datetime.now().hour < 7):
     
         f.write("cat toy running at " + str(datetime.datetime.now()))
 
@@ -82,4 +82,4 @@ while True:
                     time.sleep(2.0)
 
         pwm.set_pwm(15,0,000)
-        time.sleep(60.0*60.0*random.uniform(0.5,1.5))
+        time.sleep(60.0*60.0*random.uniform(2.5,3.5))
